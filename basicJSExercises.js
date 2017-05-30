@@ -13,20 +13,20 @@ Output:
  --------------------------- */
 
 function areaRectangle(length, width) {
-  return "No code yet";
+  return length*width;
 }
 console.log("Rectangle Area Calculator:");
 /* Uncomment the following to check */
-  // console.log(areaRectangle(2, 7));
-  // console.log(areaRectangle(20, 56.5));
-  // console.log(areaRectangle(50, 34));
+   console.log(areaRectangle(2, 7));
+   console.log(areaRectangle(20, 56.5));
+   console.log(areaRectangle(50, 34));
 
 
 
 
 /* ---------------------------
 
-*** #2 Rotate String ***
+*** #2 Rotate String ****
 
 Rotate a given string in the right direction by periodically removing
 one letter from the end of the string and attaching it to the front.
@@ -44,12 +44,18 @@ HINT: Use substring()
  --------------------------- */
 
 function rotate_string(text) {
-  console.log(text);
+  for(var i=0;i<text.length;i++)
+  {
+    text = text[text.lenght-1]+text.substring(0, text.length-1);
+    console.log(text);
+  }
+
+
 }
 
 console.log("Rotate String:");
 /* Uncomment the following to check */
-  //rotate_string("cat");
+  rotate_string("cat");
   //rotate_string("voracious")
 
 
@@ -72,12 +78,20 @@ HINT: Use split() and substring()
  --------------------------- */
 
 function protect_email(email) {
+  var temp=email.split('@');
+  var size=temp[0].length;
+  var tmp=email.substring(0,size/2);
+  var tmp=email.substring(0,size,email.length);
+  tmp2=tmp+'.........'+tmpl;
+  return tmp2;
+}
+
   return "protected email";
 }
 
 console.log("Protected email:");
 /* Uncomment the following to check */
-  //console.log(protect_email("harry_potter@gmail.com"));
+  console.log(protect_email("harry_potter@gmail.com"));
   //console.log(protect_email("sarah.connor@gmail.com"));
 
 
@@ -103,7 +117,7 @@ function alphabetic_order(word) {
 
 console.log("Alphabetic Order:");
 /* Uncomment the following to check */
-  // console.log(alphabetic_order("webmaster"));
+   console.log(alphabetic_order("webmaster"));
 
 
 
@@ -128,7 +142,7 @@ function remove_duplicates(arr) {
 
 console.log("Remove Duplicate Values:");
 /* Uncomment the following to check */
-  // remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+   remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
 
 
 /* ---------------------------
